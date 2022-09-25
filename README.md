@@ -80,13 +80,13 @@ Go to Backend code directory and run the docker image.
 
 
 ```
-docker run -it --rm -p 7021:80 --name onlinestorebackendcontainer onlinestorebackend
+docker run -it --rm -p 7022:80 --name onlinestorebackendcontainer onlinestorebackend
 ```
 
 Verifying by running the backend api endpoint
 
 ```
-http://localhost:7021/product
+http://localhost:7022/product
 ```
 
 ![image](https://user-images.githubusercontent.com/30829678/192166967-fdfe544c-3034-40c0-a56d-65d53372117f.png)
