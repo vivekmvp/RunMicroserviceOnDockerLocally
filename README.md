@@ -106,6 +106,6 @@ Verifying by running the frontend url
 http://localhost:5067
 ```
 
-![image](https://user-images.githubusercontent.com/30829678/192159467-22d332e5-7216-4502-ab0a-611011619f33.png)
+![image](https://user-images.githubusercontent.com/30829678/192105629-11b9cf64-8933-4dc0-88ce-8f853e3a2b07.png)
 
 
