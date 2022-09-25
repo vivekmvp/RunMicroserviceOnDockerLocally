@@ -18,10 +18,94 @@ Running microservices and web on Docker Locally :star_struck:
 
 ## Creating a Docker File for Frontend web
 
+```
+  FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+  WORKDIR /src
+  COPY frontend.csproj .
+  RUN dotnet restore
+  COPY . .
+  RUN dotnet publish -c release -o /app
+
+  FROM mcr.microsoft.com/dotnet/aspnet:6.0
+  WORKDIR /app
+  EXPOSE 80
+  EXPOSE 443
+  COPY --from=build /app .
+  ENTRYPOINT ["dotnet", "frontend.dll"]
+```
 
 
 
 ## Creating a Docker File for Backend Api
 
+And similarly add Docker file code for Backend api
+
 ----
+
+# Build and Run the Docker Image locally
+
+## Build Docker Image
+
+Go to Backend code directory and build the docker image.
+
+```
+docker build -t onlinestorebackend .
+```
+
+![image](https://user-images.githubusercontent.com/30829678/192162597-a01be5e2-4b58-4a52-809c-b764252b3950.png)
+
+
+
+And similarly for Frondend
+
+
+```
+docker build -t onlinestorefrontend .
+```
+
+![image](https://user-images.githubusercontent.com/30829678/192162545-0b6a15e1-851f-4eec-b2ab-f49259ababc0.png)
+
+![image](https://user-images.githubusercontent.com/30829678/192162561-435c5687-5d9b-48b2-8238-3645279f6b96.png)
+
+
+You can verify that image was build successfully in Docker Desktop locally
+
+![image](https://user-images.githubusercontent.com/30829678/192162614-67d298ac-0186-41b2-8936-10c140cceb9c.png)
+
+
+
+## Run Docker Image Locally
+
+Go to Backend code directory and run the docker image.
+
+
+```
+docker run -it --rm -p 7021:80 --name onlinestorebackendcontainer onlinestorebackend
+```
+
+Verifying by running the backend api endpoint
+
+```
+http://localhost:7021/product
+```
+
+![image](https://user-images.githubusercontent.com/30829678/192166967-fdfe544c-3034-40c0-a56d-65d53372117f.png)
+
+
+
+
+And similarly for Frondend
+
+```
+docker run -it --rm -p 7067:443 --name onlinestorefrontendcontainer onlinestorefrontend
+```
+
+Verifying by running the frontend url
+
+```
+http://localhost:7067
+```
+
+![image](https://user-images.githubusercontent.com/30829678/192105629-11b9cf64-8933-4dc0-88ce-8f853e3a2b07.png)
+
 
