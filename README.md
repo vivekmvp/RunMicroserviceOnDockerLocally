@@ -52,7 +52,8 @@ Go to Backend code directory and build the docker image.
 docker build -t onlinestorebackend .
 ```
 
-![image](https://user-images.githubusercontent.com/30829678/192160212-4ac722a6-852f-4d6f-8454-4e7e60ff4368.png)
+![image](https://user-images.githubusercontent.com/30829678/192162597-a01be5e2-4b58-4a52-809c-b764252b3950.png)
+
 
 
 And similarly for Frondend
@@ -62,10 +63,13 @@ And similarly for Frondend
 docker build -t onlinestorefrontend .
 ```
 
-![image](https://user-images.githubusercontent.com/30829678/192160277-dcd08a32-9d1f-4123-9ce1-f230becae11f.png)
+![image](https://user-images.githubusercontent.com/30829678/192162545-0b6a15e1-851f-4eec-b2ab-f49259ababc0.png)
+
+![image](https://user-images.githubusercontent.com/30829678/192162561-435c5687-5d9b-48b2-8238-3645279f6b96.png)
 
 
 You can verify that image was build successfully in Docker Desktop locally
 
+![image](https://user-images.githubusercontent.com/30829678/192162614-67d298ac-0186-41b2-8936-10c140cceb9c.png)
 
 
