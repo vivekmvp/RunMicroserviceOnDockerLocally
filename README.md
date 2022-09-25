@@ -83,10 +83,25 @@ Go to Backend code directory and run the docker image.
 docker run -it --rm -p 5200:80 --name onlinestorebackendcontainer onlinestorebackend
 ```
 
+Verifying by running the backend api endpoint
+
+```
+http://localhost:5200/product
+```
+
+![image](https://user-images.githubusercontent.com/30829678/192163429-18e9c443-b501-4e8a-8b86-05875de76751.png)
+
 
 
 And similarly for Frondend
 
 ```
-docker run -it --rm -p 5200:80 --name onlinestorefrontendcontainer onlinestorefrontend
+docker run -it --rm -p 5201:80 --name onlinestorefrontendcontainer onlinestorefrontend
 ```
+
+Verifying by running the frontend url
+
+```
+http://localhost:5201
+```
+
