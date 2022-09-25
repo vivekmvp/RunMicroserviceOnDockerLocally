@@ -97,13 +97,13 @@ http://localhost:7021/product
 And similarly for Frondend
 
 ```
-docker run -it --rm -p 5067:80 --name onlinestorefrontendcontainer onlinestorefrontend
+docker run -it --rm -p 7067:443 --name onlinestorefrontendcontainer onlinestorefrontend
 ```
 
 Verifying by running the frontend url
 
 ```
-http://localhost:5067
+http://localhost:7067
 ```
 
 ![image](https://user-images.githubusercontent.com/30829678/192105629-11b9cf64-8933-4dc0-88ce-8f853e3a2b07.png)
