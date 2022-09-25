@@ -73,3 +73,20 @@ You can verify that image was build successfully in Docker Desktop locally
 ![image](https://user-images.githubusercontent.com/30829678/192162614-67d298ac-0186-41b2-8936-10c140cceb9c.png)
 
 
+
+## Run Docker Image Locally
+
+Go to Backend code directory and run the docker image.
+
+
+```
+docker run -it --rm -p 5200:80 --name onlinestorebackendcontainer onlinestorebackend
+```
+
+
+
+And similarly for Frondend
+
+```
+docker run -it --rm -p 5200:80 --name onlinestorefrontendcontainer onlinestorefrontend
+```
