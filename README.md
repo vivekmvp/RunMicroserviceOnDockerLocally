@@ -8,6 +8,9 @@ Running microservices and web on Docker Locally :star_struck:
 
 ----
 
+# High-level Architecture of Application
 
+![image](https://user-images.githubusercontent.com/30829678/192071871-fdd7c8d2-2f9a-4262-a1cd-d32afe211ff1.png)
 
+----
 
