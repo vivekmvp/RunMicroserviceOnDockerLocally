@@ -80,13 +80,13 @@ Go to Backend code directory and run the docker image.
 
 
 ```
-docker run -it --rm -p 7021:80 --name onlinestorebackendcontainer onlinestorebackend
+docker run -it --rm -p 5021:80 --name onlinestorebackendcontainer onlinestorebackend
 ```
 
 Verifying by running the backend api endpoint
 
 ```
-http://localhost:7021/product
+http://localhost:5021/product
 ```
 
 ![image](https://user-images.githubusercontent.com/30829678/192166967-fdfe544c-3034-40c0-a56d-65d53372117f.png)
@@ -97,15 +97,76 @@ http://localhost:7021/product
 And similarly for Frondend
 
 ```
-docker run -it --rm -p 7067:443 --name onlinestorefrontendcontainer onlinestorefrontend
+docker run -it --rm -p 5067:80 --name onlinestorefrontendcontainer onlinestorefrontend
 ```
 
 Verifying by running the frontend url
 
 ```
-http://localhost:7067
+http://localhost:5067
 ```
 
 ![image](https://user-images.githubusercontent.com/30829678/192105629-11b9cf64-8933-4dc0-88ce-8f853e3a2b07.png)
 
 
+
+
+
+----
+
+# Running the docker image using docker-compose file
+
+## Create a docker-compose.yaml file
+
+```
+version: '3.4'
+
+services: 
+
+  frontend:
+    image: onlinestorefrontend
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    environment: 
+      - backendUrl=http://backend
+    ports:
+      - "5067:80"
+    depends_on: 
+      - backend
+
+
+  backend:
+    image: onlinestorebackend
+    build: 
+      context: backend
+      dockerfile: Dockerfile
+    ports: 
+      - "5021:80"
+```      
+
+**Run the following command to Build image using docker-compose.yaml file**
+
+```      
+docker-compose build
+```      
+
+![image](https://user-images.githubusercontent.com/30829678/192371691-0536995a-4680-4865-9f91-9be709f64797.png)
+
+<br/>
+
+**Run the following command to Run image using docker-compose.yaml file**
+
+```      
+docker-compose up
+```      
+![image](https://user-images.githubusercontent.com/30829678/192371800-caef0a14-748f-4a04-93b7-7ae2f471cf5f.png)
+
+
+Verifying by running the frontend url
+
+```
+http://localhost:5067
+```
+
+![image](https://user-images.githubusercontent.com/30829678/192105629-11b9cf64-8933-4dc0-88ce-8f853e3a2b07.png)
