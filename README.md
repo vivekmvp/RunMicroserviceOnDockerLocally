@@ -162,3 +162,11 @@ docker-compose up
 ```      
 ![image](https://user-images.githubusercontent.com/30829678/192371800-caef0a14-748f-4a04-93b7-7ae2f471cf5f.png)
 
+
+Verifying by running the frontend url
+
+```
+http://localhost:5067
+```
+
+![image](https://user-images.githubusercontent.com/30829678/192105629-11b9cf64-8933-4dc0-88ce-8f853e3a2b07.png)
