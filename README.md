@@ -151,8 +151,14 @@ services:
 docker-compose build
 ```      
 
+![image](https://user-images.githubusercontent.com/30829678/192371691-0536995a-4680-4865-9f91-9be709f64797.png)
+
+<br/><br/>
+
 **Run the following command to Run image using docker-compose.yaml file**
 
 ```      
 docker-compose up
 ```      
+![image](https://user-images.githubusercontent.com/30829678/192371800-caef0a14-748f-4a04-93b7-7ae2f471cf5f.png)
+
