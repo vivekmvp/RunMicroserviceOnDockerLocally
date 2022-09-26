@@ -4,22 +4,14 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>3812d613-6c89-4bf3-98d8-9a0009e5dbc6</UserSecretsId>
-    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	<UserSecretsId>44a7f7fc-3e36-4db9-bb0f-e017a63e5231</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="RestSharp" Version="108.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="..\.dockerignore" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="..\.dockerignore" />
   </ItemGroup>
 
 </Project>
