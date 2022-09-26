@@ -109,3 +109,50 @@ http://localhost:5067
 ![image](https://user-images.githubusercontent.com/30829678/192105629-11b9cf64-8933-4dc0-88ce-8f853e3a2b07.png)
 
 
+
+
+
+----
+
+# Running the docker image using docker-compose file
+
+## Create a docker-compose.yaml file
+
+```
+version: '3.4'
+
+services: 
+
+  frontend:
+    image: onlinestorefrontend
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    environment: 
+      - backendUrl=http://backend
+    ports:
+      - "5067:80"
+    depends_on: 
+      - backend
+
+
+  backend:
+    image: onlinestorebackend
+    build: 
+      context: backend
+      dockerfile: Dockerfile
+    ports: 
+      - "5021:80"
+```      
+
+**Run the following command to Build image using docker-compose.yaml file**
+
+```      
+docker-compose build
+```      
+
+**Run the following command to Run image using docker-compose.yaml file**
+
+```      
+docker-compose up
+```      
