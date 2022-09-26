@@ -80,13 +80,13 @@ Go to Backend code directory and run the docker image.
 
 
 ```
-docker run -it --rm -p 7022:80 --name onlinestorebackendcontainer onlinestorebackend
+docker run -it --rm -p 5021:80 --name onlinestorebackendcontainer onlinestorebackend
 ```
 
 Verifying by running the backend api endpoint
 
 ```
-http://localhost:7022/product
+http://localhost:5021/product
 ```
 
 ![image](https://user-images.githubusercontent.com/30829678/192166967-fdfe544c-3034-40c0-a56d-65d53372117f.png)
@@ -97,13 +97,13 @@ http://localhost:7022/product
 And similarly for Frondend
 
 ```
-docker run -it --rm -p 7067:443 --name onlinestorefrontendcontainer onlinestorefrontend
+docker run -it --rm -p 5067:80 --name onlinestorefrontendcontainer onlinestorefrontend
 ```
 
 Verifying by running the frontend url
 
 ```
-http://localhost:7067
+http://localhost:5067
 ```
 
 ![image](https://user-images.githubusercontent.com/30829678/192105629-11b9cf64-8933-4dc0-88ce-8f853e3a2b07.png)
