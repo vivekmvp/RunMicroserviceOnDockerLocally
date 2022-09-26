@@ -153,7 +153,7 @@ docker-compose build
 
 ![image](https://user-images.githubusercontent.com/30829678/192371691-0536995a-4680-4865-9f91-9be709f64797.png)
 
-<br/><br/>
+<br/>
 
 **Run the following command to Run image using docker-compose.yaml file**
 
